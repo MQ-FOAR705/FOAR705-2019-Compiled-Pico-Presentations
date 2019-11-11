@@ -9,7 +9,7 @@
 % Bibliography
 % Closing
  
-\documentclass[aspectratio=1610, 11pt]{beamer} % Aspect ratio
+\documentclass[aspectratio=169, 11pt]{beamer} % Aspect ratio
 % https://tex.stackexchange.com/a/14339/5483 
 % Possible values: 1610, 169, 149, 54, 43 and 32.
 % 169 = 16:9
@@ -64,11 +64,14 @@
 %TODO SHAWN REPLACE OSF URL
 %\setbeamertemplate{footline}{\strut~\texttt{https://github.com/MQ-FOAR705/MQ-FOAR705-Week1}\hfill\insertframenumber~/~\inserttotalframenumber\strut~~~}
 
-\newcommand{\makeslide}[3]{%
+\newcommand{\makeslide}[4]{%
 \section{\huge#1\\\vspace{12pt}\Large#2}
 \setbeamercolor{background canvas}{bg=}
 \includepdf[pages=1-2,
-%fitpaper,
+offset=0 -1mm,
+%delta=0 1mm
+%fitpaper
+scale=#4,
 %tempatesize={12.8}{8}
 %,templatesize= {\beamer@paperwidth}{\beamer@paperheight}
 ]{presentations/#3}
@@ -99,10 +102,49 @@
 
 % \includepdf[pages=-]{presentations/ellen.pdf}
 
+\section{Texts. Machines. Data.}
 
-\makeslide{Identifying key themes and efficient storage for qualitative analysis}{Ellen Kirkpatrick}{ellen.pdf}
-\makeslide{The Hieroglyphics Initiative Workshop: Sharing Files Made Easy}{Bree Kelly}{PICO_42849705.pdf}
+\makeslide{The Hieroglyphics Initiative: Sharing Information Made Easy}{Bree Kelly}{PICO_42849705.pdf}{0.98}
 
+\makeslide{Identifying key themes and efficient storage for qualitative
+analysis}{Ellen Kirkpatrick}{ellen.pdf}{0.98}
+
+\makeslide{Conversion and Analysis From Multiple Data Sources}{Aaron Hammond}{aaron.pdf}{0.98}
+
+
+
+\makeslide{Voyant and the Data Life Cycle}{John Hundley}{john.pdf}{1}
+
+
+\begin{frame}{Discussion}
+
+Spread around the room. For the next 15-30 minutes, wander up to individual presenters and ask them questions.
+
+\end{frame}
+
+
+\section{Organisation, Presentation, and Version Control}
+\makeslide{Improving Organisation of Music Production Projects}{Dylan Wheeler}{dylan.pdf}{0.98}
+
+
+\begin{frame}{Discussion}
+
+Spread around the room. For the next 15-30 minutes, wander up to individual presenters and ask them questions.
+
+\end{frame}
+
+\section{APIs and Ex Miscellanea}
+\makeslide{Hyptothes.is: Local Backups and Analysis}{Georgia Rutherford}{georgia.pdf}{0.98}
+\makeslide{Discogs: Producing a Techno Data Set for Machine Learning}{Matthew Clark}{matthew.pdf}{0.98}
+
+\begin{frame}{Discussion}
+
+Spread around the room. For the next 15-30 minutes, wander up to individual presenters and ask them questions.
+
+\end{frame}
+
+
+% \makeslide{Two common and time consuming tasks when doing research:}{Osmond Chiu}{osmund.pdf}
 % \begin{frame}{Japanese Advertising Research}
 % \begin{columns}
 % \column{0.5\textwidth}
